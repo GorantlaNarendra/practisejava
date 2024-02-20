@@ -1,0 +1,15 @@
+class HelloWorld {
+    public static void main(String[] args) {
+        for(int i=0;i<=5;i++){
+        System.out.println(i);
+        if(i==3){
+             continue;
+        }
+       System.out.println("number 3 is skipping===>"+i);
+       if(i==4){
+           break;
+       }
+        System.out.println("if the value is equal to 4 then the for loop is breaked===>"+i);
+        }
+    }
+}
