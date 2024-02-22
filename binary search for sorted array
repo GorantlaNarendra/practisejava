@@ -1,0 +1,31 @@
+class BinarySearch {
+    public static void main(String args[]) {
+
+        int[] arrayofnums = {2,3,6,8,9,13,20,56,90};
+        int number_to_search_for=4;
+        int low = 0;
+        int high = arrayofnums.length - 1;
+        int middleIndex;
+        boolean f=false;
+        while (low <= high) {
+            middleIndex = (low)+(high -low) / 2;
+            
+            if (number_to_search_for == arrayofnums[middleIndex]) {
+                System.out.println("index===>"+middleIndex);
+              f=true;
+                break;
+            }
+            if (number_to_search_for < arrayofnums[middleIndex]) {
+                high = middleIndex - 1;
+            }
+            if (number_to_search_for > arrayofnums[middleIndex]) {
+                low = middleIndex + 1;
+            }
+
+        }
+       if(f!=true){
+         System.out.println("index not found");
+}
+    }
+
+}
